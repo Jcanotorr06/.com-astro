@@ -1,0 +1,91 @@
+/**@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap');*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --duration: 4s;
+    --delay: var(--duration) + 1s;
+    --easing: ease-in-out;
+}
+
+.loader {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    animation: slide-out 1s var(--easing);
+    animation-fill-mode: forwards;
+    animation-delay: 4.5s;
+    z-index: 100;
+}
+
+.loader *{
+    font-family: 'Antonio', sans-serif;
+    @apply bg-gray-900;
+}
+
+#loader-hundreds{
+    animation: loader-hundreds var(--duration) var(--easing);
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+}
+
+#loader-tens{
+    animation: loader-tens var(--duration) var(--easing);
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+}
+
+#loader-ones{
+    animation: loader-ones var(--duration) var(--easing);
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+}
+
+@keyframes loader-hundreds{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-102%);
+    }
+}
+
+@keyframes loader-tens{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-964%);
+    }
+}
+
+@keyframes loader-ones{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-10447%);
+    }
+}
+
+@keyframes  slide-and-fade-out {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}

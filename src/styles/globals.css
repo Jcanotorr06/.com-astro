@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Neuemontreal";
+    src: url("/fonts/NeueMontreal-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Antonio';
+    src: url('/fonts/Antonio-Variable.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@layer base {
+    [data-theme="default"] {
+        --accent-color: 15, 23, 42, 1;
+    }
+    [data-theme="red"] {
+        --accent-color: 27, 9, 9, 1;
+    }
+    [data-theme="green"] {
+        --accent-color: 6, 25, 13, 1;
+    }
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    transition: 0.5s ease;
+}
+
+::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: rgba(255, 255, 255, 0.7);
+}
+
+::-webkit-scrollbar-track{
+    @apply bg-accent border-accent outline-accent;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Neuemontreal", sans-serif;
+}
+
+body {
+    @apply m-0 p-0 bg-accent text-white;
+    z-index: 1;
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    transform-origin: 0 0;
+    background-image: url("/images/grid.svg");
+    background-size: 100%;
+    inset: 0 6rem;
+}
+
+body::after{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/images/grain.svg");
+    background-size: cover;
+}
+
+.menu-line {
+    @apply z-[1] w-6 h-[1px] bg-gray-900 block;
+}
+
+#menu-button:hover #menu-background{
+    width: 90%;
+    height: 90%;
+}
+
+#color-mode-list {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: fadeOut 0.5s ease forwards;
+    display: flex;
+}
+
+#color-mode-list li {
+    transform: translate3d(0.5rem, 0px, 0px);
+    opacity: 0;
+    animation: fadeOutMoveOut 1s ease forwards;
+}
+
+#color-mode-button:hover #color-mode-list {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+#color-mode-button:hover li {
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1;
+    animation: fadeInMoveIn 1s ease forwards;
+}
+
+#color-mode-background {
+    transition: width 0.5s ease;
+    max-width: 134px;
+}
+
+#color-mode-button:hover #color-mode-background {
+    animation: backgroundWidth 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes fadeInMoveIn {
+    0% {
+        opacity: 0;
+        transform: translate3d(0.5rem, 0px, 0px) rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px) rotate(220deg);
+    }
+}
+
+@keyframes fadeOutMoveOut {
+    0% {
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px) rotate(220deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(0.5rem, 0px, 0px) rotate(0deg);
+    }
+}
+
+@keyframes backgroundWidth {
+    0% {
+        max-width: 134px;
+    }
+    100% {
+        max-width: 100%;
+    }
+}
+
+#about-me-background {
+    width: 0;
+    height: 100%;
+    right: 0;
+    animation: shrink-background 0.5s ease forwards;
+    mix-blend-mode: difference;
+    @apply bg-gray-900;
+}
+
+#about-me-button:hover #about-me-background {
+    animation: grow-background 0.5s ease forwards;
+}
+
+#about-me-arrow{
+    animation: rotate-circle-reverse 0.5s ease forwards;
+}
+
+#about-me-button:hover #about-me-arrow{
+    animation: rotate-circle 0.5s ease forwards;
+}
+
+@keyframes shrink-background {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes grow-background{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes rotate-circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes rotate-circle-reverse {
+    0% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
