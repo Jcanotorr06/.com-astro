@@ -1,0 +1,85 @@
+---
+import { SEO } from "astro-seo";
+import Loader from "../components/Loading/Loader";
+import Footer from "../components/Navigation/Footer.astro";
+import NavBar from "../components/Navigation/NavBar";
+import "../styles/globals.css";
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<SEO
+			title={`Joseph Cano's Portfolio | ${title}`}
+			description="Joseph Cano is a software engineer and designer based in Panama. He is currently working at Paguelofacil as a Frontend Engineer."
+			canonical="https://josephcano.com"
+			charset="utf-8"
+			openGraph={{
+				basic: {
+					title: "Joseph Cano's Portfolio",
+					type: "website",
+					image: "https://raw.githubusercontent.com/Jcanotorr06/images/main/gitme_og.PNG",
+					url: "https://josephcano.com",
+				},
+				image: {
+					alt: "Joseph Cano's Portfolio",
+				},
+				optional: {
+					description: "Joseph Cano is a software engineer and designer based in Panama. He is currently working at Paguelofacil as a Frontend Engineer.",
+					locale: "en_US",
+					siteName: "Joseph Cano's Portfolio"
+				},
+			}}
+			twitter={{
+				card: "summary_large_image",
+				site: "@spoofy507",
+				creator: "@spoofy507",
+			}}
+			extend={{
+				link: [
+					{
+						rel: "icon",
+						href: "/favicon.svg",
+					},
+				],
+				meta: [
+					{
+						name: "viewport",
+						content: "width=device-width, initial-scale=1.0",
+					}
+				]
+			}}
+		/>
+	</head>
+	<body class="flex flex-col min-h-screen transition-all duration-1000" data-theme="default">
+		<!-- <Loader client:load/> -->
+		<header>
+			<NavBar client:load/>
+		</header>
+		<main class="grow">
+			<slot />
+		</main>
+		<footer class="w-full h-screen px-8 py-10 flex justify-center items-center">
+			<Footer/>
+		</footer>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 124, 58, 237;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #F6F6F6;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+</style>

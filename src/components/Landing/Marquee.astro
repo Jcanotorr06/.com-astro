@@ -1,0 +1,55 @@
+---
+
+---
+
+<section
+    id="marquee"
+    class="marquee"
+>
+    <article class="marquee_inner">
+        <span>Fullstack Developer & Software Engineer &</span>
+        <span>Fullstack Developer & Software Engineer &</span>
+        <span>Fullstack Developer & Software Engineer &</span>
+        <span>Fullstack Developer & Software Engineer &</span>
+    </article>
+</section>
+
+<style>
+    .marquee{
+        padding-top: 12rem;
+        overflow: hidden;
+        position: relative;
+        --offset: 20vw;
+        --move-initial: calc(-25% + var(--offset));
+        --move-end: calc(-50% + var(--offset));
+        user-select: none;
+    }
+
+    .marquee_inner{
+        width: fit-content;
+        display: flex;
+        position: relative;
+        transform: translate3d(var(--move-initial), 0, 0);
+        animation: marquee 15s linear infinite;
+        user-select: none;
+
+    }
+
+    .marquee_inner span{
+        padding: 0 2vw;
+        font-size: 20vw;
+        font-weight: bold;
+        white-space: nowrap;
+        font-family: "Antonio", sans-serif;
+        user-select: none;
+    }
+
+    @keyframes marquee{
+        0%{
+            transform: translate3d(var(--move-initial), 0, 0);
+        }
+        100%{
+            transform: translate3d(var(--move-end), 0, 0);
+        }
+    }
+</style>

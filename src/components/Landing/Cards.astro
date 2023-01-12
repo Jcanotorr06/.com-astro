@@ -1,0 +1,33 @@
+---
+import ArrowButton from "../Buttons/ArrowButton";
+
+---
+
+<section 
+		aria-label="cards"
+		class="relative px-8 w-full grid gap-5 grid-cols-1 lg:grid-cols-2"
+	>
+		<article
+			aria-label="card"
+			class="flex px-6 py-8 flex-col items-start bg-white col-span-1 row-span-1 rounded-2xl justify-between"
+		>
+			<div>
+				<p class="text-4xl font-medium text-gray-900">
+					Hi! I'm Joseph Cano. I am a Panama based fullstack developer and software engineer who constantly seeks out innovative solutions to everyday problems.<br/>
+					For whatever reason, you've stumbled upon my website. I hope you enjoy your stay!
+				</p>
+			</div>
+			<ArrowButton text="A bit about me" link="/about" />
+		</article>
+		<article
+			aria-label="card"
+			class="flex overflow-hidden lex-col items-start bg-gray-800 col-span-1 row-span-1 rounded-2xl justify-between"
+		>
+			<div>
+				<img
+					src="/images/me.webp"
+					alt="me"
+				/>
+			</div>
+		</article>
+	</section>
