@@ -10,7 +10,8 @@ const NavBar:Component = () => {
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen());
-        document.body.classList.toggle("overflow-hidden");
+        document.body.classList.add(menuOpen() ? "overflow-hidden" : "overflow-auto")
+        document.body.classList.remove(menuOpen() ? "overflow-auto" : "overflow-hidden")
     }
 
     const toggleColorMode = () => {
@@ -119,7 +120,7 @@ const NavBar:Component = () => {
                         />
                     </div> */}
                     <div class="menu">
-                        <input type="checkbox" id="active" />
+                        <input type="checkbox" id="active" onChange={toggleMenu} />
                         <label for="active" class="menu-btn">
                             <div class="menu-line"/>
                             <div class="menu-line"/>
