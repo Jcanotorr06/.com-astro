@@ -20,7 +20,10 @@ const Loader:Component = () => {
     return (
         <div class="loader w-screen h-screen text-white" hidden={!visible()} aria-hidden>
             <div class="w-full h-full flex p-12 flex-col justify-between items-start">
-                <div style={{"height": "265px", "font-size": "250px"}} id="loader-number-container" class="overflow-hidden w-full flex pt-1 justify-end items-stretch font-bold leading-[1]">
+                <div 
+                    id="loader-number-container" 
+                    class="overflow-hidden w-full flex pt-1 justify-end items-stretch font-bold leading-[1] h-[96px] text-[90px] lg:h-[256px] lg:text-[250px]"
+                >
                     <div class="overflow-hidden flex" id="loader-sub-container">
                         <div class="grid auto-rows-max auto-cols-fr gap-0 text-right" id="loader-hundreds">
                             {/* Hundreds */}

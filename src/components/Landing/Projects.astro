@@ -1,67 +1,124 @@
 ---
-
+    const projects = [
+        {
+            title: "PagueloFacil",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet lorem.",
+            image: "https://raw.githubusercontent.com/Jcanotorr06/images/main/Proyects/paguelofacil.png",
+            link: "https://comercios.paguelofacil.com"
+        },
+        {
+            title: "Profepedia",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet lorem.",
+            image: "https://raw.githubusercontent.com/Jcanotorr06/images/main/Proyects/profepedia.png",
+            link: "https:www.profepedia.xyz"
+        },
+        {
+            title: "Personal Blog",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet lorem.",
+            image: "https://raw.githubusercontent.com/Jcanotorr06/images/main/Proyects/blog.png",
+            link: "https:/blog.josephcano.com"
+        },
+        {
+            title: "Ruth Cano's Portfolio",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet lorem.",
+            image: "https://raw.githubusercontent.com/Jcanotorr06/images/main/Proyects/ruthcano.png",
+            link: "https://www.ruthcano.com"
+        },
+        {
+            title: "GitMe",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet lorem.",
+            image: "https://raw.githubusercontent.com/Jcanotorr06/images/main/Proyects/gitme.png",
+            link: "https://gitme.josephcano.com"
+        },
+        {
+            title: "Dev Toolbox",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet lorem. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquam nisl, eget aliquam nisl nisl sit amet lorem.",
+            image: "https://raw.githubusercontent.com/Jcanotorr06/images/main/Proyects/toolbox.png",
+            link: "https://toolbox.josephcano.com"
+        },
+    ]
 ---
 
 <section
     class="px-8 lg:px-24 relative w-full grid gap-5 grid-cols-6"
 >
     <article class="mb-2 w-full col-span-full">
-        <h2 class="text-5xl font-bold">
+        <h2 class="text-2xl lg:text-5xl font-bold">
             Featured Projects
         </h2>
     </article>
-    <article
-        class="col-span-6 bg-slate-500 rounded-lg p-4 lg:h-[90vh]"
+    <a
+        href={projects[0].link}
+        class="col-span-6 relative rounded-lg p-4 flex items-end justify-end h-[200px] lg:h-[90vh]"
     >
+        <img src={projects[0].image} alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg hover:brightness-50 transition-all"/>
         <h2
-            class="text-xl font-bold"
+            class="text-xl lg:text-4xl font-bold relative mix-blend-difference"
         >
-            Project 1
+            {projects[0].title}
         </h2>
-    </article>
-    <article
-        class="col-span-6 lg:col-span-3 bg-slate-500 rounded-lg p-4 lg:h-[60vh]"
+    </a>
+    <a
+        href={projects[1].link}
+        class="col-span-6 lg:col-span-3 rounded-lg p-4 relative flex items-end justify-end h-[200px] lg:h-[60vh]"
     >
+        <img src={projects[1].image} alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg hover:brightness-50 transition-all"/>
         <h2
-            class="text-xl font-bold"
+            class="text-xl lg:text-4xl font-bold relative mix-blend-difference"
         >
-            Project 2
+            {projects[1].title}
         </h2>
-    </article>
-    <article
-        class="col-span-6 lg:col-span-3 bg-slate-500 rounded-lg p-4 lg:h-[60vh]"
+    </a>
+    <a
+        href={projects[2].link}
+        class="col-span-6 lg:col-span-3 rounded-lg p-4 relative flex items-end justify-end h-[200px] lg:h-[60vh]"
     >
+        <img src={projects[2].image} alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg hover:brightness-50 transition-all"/>
         <h2
-            class="text-xl font-bold"
+            class="text-xl lg:text-4xl font-bold relative mix-blend-difference"
         >
-            Project 3
+            {projects[2].title}
         </h2>
-    </article>
-    <article
-        class="col-span-6 lg:col-span-4 bg-slate-500 rounded-lg p-4"
+    </a>
+    <a
+        href={projects[3].link}
+        class="col-span-6 lg:col-span-4 rounded-lg p-4 relative flex items-end justify-end h-[200px] lg:h-[90vh]"
     >
+        <img 
+            src={projects[3].image} 
+            alt="" 
+            class="absolute tr inset-0 w-full h-full object-cover rounded-lg hover:brightness-50 transition-all"
+        />
         <h2
-            class="text-xl font-bold"
+            class="text-xl lg:text-4xl font-bold relative mix-blend-difference"
         >
-            Project 4
+            {projects[3].title}
         </h2>
-    </article>
+    </a>
     <article
-        class="col-span-6 lg:col-span-2 flex flex-col gap-5 lg:h-[90vh]"
+        class="col-span-6 lg:col-span-2 flex flex-col gap-5 h-[400px] lg:h-[90vh]"
     >
-        <div class="w-full flex-1 bg-slate-500 rounded-lg p-4">
+        <a
+            href={projects[4].link} 
+            class="w-full flex-1 rounded-lg p-4 relative flex items-end justify-end"
+        >
+            <img src={projects[4].image} alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg hover:brightness-50 transition-all"/>
             <h2
-                class="text-xl font-bold"
+                class="text-xl lg:text-4xl font-bold relative mix-blend-difference"
             >
-                Project 5
+                {projects[4].title}
             </h2>
-        </div>
-        <div class="w-full flex-1 bg-slate-500 rounded-lg p-4">
+        </a>
+        <a
+            href={projects[5].link} 
+            class="w-full flex-1 rounded-lg p-4 relative flex items-end justify-end"
+        >
+            <img src={projects[5].image} alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg hover:brightness-50 transition-all"/>
             <h2
-                class="text-xl font-bold"
+                class="text-xl lg:text-4xl font-bold relative mix-blend-difference"
             >
-                Project 6
+                {projects[5].title}
             </h2>
-        </div>
+        </a>
     </article>
 </section>
