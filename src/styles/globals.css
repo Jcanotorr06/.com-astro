@@ -80,10 +80,6 @@ body::after{
     background-size: cover;
 }
 
-.menu-line {
-    @apply z-[1] w-6 h-[1px] bg-gray-900 block;
-}
-
 #menu-button:hover #menu-background{
     width: 90%;
     height: 90%;
