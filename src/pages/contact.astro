@@ -1,0 +1,16 @@
+---
+import ContactForm from "../components/Contact/ContactForm";
+import Layout from "../layouts/Layout.astro"
+
+console.log(import.meta.env.ASTRO_TEST_VAR)
+---
+
+<Layout title="Contact">
+    <ContactForm 
+        client:load 
+        serviceId={import.meta.env.EMAIL_SERVICE_ID}
+        templateId={import.meta.env.EMAIL_TEMPLATE_ID}
+        publicKey={import.meta.env.EMAIL_PUBLIC_KEY}
+    />
+</Layout>
+

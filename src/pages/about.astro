@@ -1,12 +1,86 @@
 ---
+import Tools from "../components/About/Tools";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
     title="About"
 >
-    <h1>About</h1>
-    <p>
-        This is a simple example of a page using Astro.
-    </p>
+    <section 
+        class="pt-48 px-8 w-screen h-screen text-center flex flex-col justify-center items-center gap-24 overflow"
+    >
+        <article class="flex flex-col gap-4">
+            <h1 class="text-5xl lg:text-9xl font-black">
+                Joseph Cano
+            </h1>
+            <h2 class="text-2xl lg:text-4xl font-bold">
+                Fullstack Developer & Software Engineer
+            </h2>
+        </article>
+        <a 
+            href="https://drive.google.com/file/d/1fhsJZX_lNQfj__VHpYVNWiqmr8KMlgEM/view?usp=share_link" 
+            class="text-xl lg:text-3xl font-bold block text-gray-300 underline hover:text-gray-400 transition-colors"
+        >
+            Download Resume
+        </a>
+    </section>
+    <section
+        class="px-8 lg:px-24 relative w-full grid grid-cols-1 lg:grid-cols-10 gap-5 mb-8 lg:mb-24"
+    >
+        <Tools />
+        <article class="lg:col-span-8 col-start-1 lg:col-start-3">
+            <p class="text-xl lg:text-[36px] lg:leading-[50px]">
+                I am a fullstack developer and software engineer working out of Panama City, Panama, 
+                and I am constantly looking for ground-breaking solutions to 
+                issues that arise in daily life. In my work, I spend most of
+                my time coming up with innovative solutions to development
+                problems, and I am always looking for ways to improve my
+                skills and learn new technologies.
+                <br/>
+                <br/>
+                I have been part of this industry for almost two years now,
+                and within that time, I've honed my analytic and collaboration
+                skills which makes working with a team easier, regardless of
+                the size or skills of the team members. I am always looking for
+                opportunities to help others and to learn from them.
+                <br/>
+                <br/>
+                Even though I stumbled upon this industry by chance, I have
+                found a passion for it. But like they say, "Good things come
+                to us with a plan", no? I especially enjoy watching my ideas
+                come to life and seeing the impact they have on the people
+                around me.
+                <br/>
+                <br/>
+                For me, each project I have the privilege of working on is
+                a new opportunity to learn and grow as a developer, meet new
+                people with ideas that differ from mine and discover things 
+                that I never knew existed.
+                <br/>
+                <br/>
+                I enjoy playing videogames and watching movies, particularty mystery 
+                thrillers like  "Memento" and "The Prestige". I listen to lots of music,
+                and David Bowie and JID are probably the ones I listen to the most (for now).
+                If I'm not working on a project, then I usually spend most of my free time in
+                the gym or with my friends, dogs and family.
+                <br/>
+                <br/>
+                I'm surprised you actually read this far, but if you did, I would like to thank
+                you for your paitience and interest in my work 🤗. I would love to hear from you,
+                so feel free reach out to me trough the 
+                <a href="/contact" class="underline text-gray-300 hover:text-gray-400 transition-colors">
+                    contact form
+                </a> 
+                or my social media accounts listed
+                <a href="#footer" class="underline text-gray-300 hover:text-gray-400 transition-colors">
+                    below
+                </a> 
+                .
+                <br/>
+                <br/>
+                I'm available for full-time roles and freelance projects worldwide, as long as
+                you don't mind me working from screens away.
+            </p>
+        </article>
+    </section>
 </Layout>

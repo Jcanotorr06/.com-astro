@@ -35,10 +35,10 @@ const NavBar:Component = () => {
     })
 
     return (
-        <nav class={`w-full fixed left-0 z-50 max-w-full px-8 pt-12 transition-all duration-1000 bg-blend-overlay ${hidden() ? "-top-32" : "top-0"}`}>
+        <nav class={`w-full fixed left-0 z-50 max-w-full px-8 lg:px-24 pt-12 transition-all duration-1000 bg-blend-overlay ${hidden() ? "-top-32" : "top-0"}`}>
             <section class="flex justify-between items-center w-full pb-5 relative z-[51]">
                 <article id="nav-left">
-                    <a href="/" class="text-2xl tracking-tight text-gray-300">
+                    <a href="/" class=" text-sm lg:text-2xl tracking-tight text-gray-300">
                         Joseph Cano&trade;
                     </a>
                 </article>
@@ -49,7 +49,7 @@ const NavBar:Component = () => {
                         onClick={toggleColorMode}
                         id="color-mode-button"
                         aria-label="color mode button"
-                        class="relative flex overflow-hidden h-11 px-4 py-3 justify-end items-center gap-4 rounded-full uppercase hover:cursor-pointer touch-manipulation"
+                        class="relative hidden lg:flex overflow-hidden h-11 px-2 py-1 lg:px-4 lg:py-3 justify-end items-center gap-4 rounded-full uppercase hover:cursor-pointer touch-manipulation"
                     >
                         <ul
                             id="color-mode-list"
@@ -75,7 +75,7 @@ const NavBar:Component = () => {
                             </li>
                         </ul>
 
-                        <div class="relative z-[1]">
+                        <div class="relative z-[1] text-xs lg:text-base">
                             Color Mode
                         </div>
                         <div
@@ -83,16 +83,16 @@ const NavBar:Component = () => {
                             class="absolute w-full h-[44px] right-0 bottom-0 z-[0] rounded-full bg-slate-800 shadow-sm"
                         />
                     </div>
-                    <div
+                    {/* <div
                         role="combobox"
                         aria-expanded={languageOpen()}
                         aria-controls="language-list"
                         aria-haspopup="listbox"
                         id="language-button"
-                        class="relative flex overflow-hidden h-11 px-8 py-3 justify-end items-center gap-4 rounded-full uppercase hover:cursor-pointer touch-manipulation"
+                        class="relative flex overflow-hidden h-11 px-4 py-1 lg:px-8 lg:py-3 justify-end items-center gap-4 rounded-full uppercase hover:cursor-pointer touch-manipulation"
                     >
                         <div
-                            class="relative z-[1]"
+                            class="relative z-[1] text-xs lg:text-base"
                         >
                             EN
                         </div>
@@ -100,13 +100,13 @@ const NavBar:Component = () => {
                             id="language-background"
                             class="absolute w-full h-[44px] right-0 bottom-0 z-[0] rounded-full bg-slate-800 shadow-sm"
                         />
-                    </div>
+                    </div> */}
                     <div
                         role="button"
                         aria-pressed={menuOpen()}
                         onClick={toggleMenu}
                         id="menu-button"
-                        class="relative flex w-14 h-14 flex-col items-center justify-center rounded-full hover:cursor-pointer overflow-hidden"
+                        class="relative flex w-10 h-10 lg:w-14 lg:h-14 flex-col items-center justify-center rounded-full hover:cursor-pointer overflow-hidden"
                     >
                         <div class="menu-line menu-line-top transform -translate-y-1"/>
                         <div class="menu-line menu-line-middle" />
