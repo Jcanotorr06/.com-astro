@@ -14,7 +14,8 @@ const ContactForm:Component<Props> = (props:Props) => {
     const { getForm, updateField, getFormStatus, submit } = useForm()
 
     createEffect(() => {
-        console.table(getFormStatus())
+        if(getFormStatus().isSuccessful) alert("Message sent successfully")
+        if(getFormStatus().isErrored) alert("Message not sent")
     })
     
     const handleSubmit = (e: Event) => {
@@ -90,6 +91,7 @@ const ContactForm:Component<Props> = (props:Props) => {
                     <article class="flex items-center">
                         <div class="w-full px-3">   
                             <button
+                                disabled={getFormStatus().isSubmitting}
                                 type="submit"
                                 class="px-16 py-3 border rounded-full text-lg hover:text-gray-400 hover:border-gray-400 transition ease-in-out"
                             >
